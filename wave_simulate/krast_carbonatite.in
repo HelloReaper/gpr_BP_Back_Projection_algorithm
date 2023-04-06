@@ -1,0 +1,32 @@
+#title: krast_carbonatite_Bscan_2D
+#domain: 21.000 30.000 0.050
+#dx_dy_dz: 0.050 0.050 0.050
+#time_window: 50e-8
+
+#material: 6 0.005 1 0 granite
+#material: 81 0.003 1 0 krast
+
+#waveform: ricker 5 3.2e7 my_ricker
+
+#hertzian_dipole: z 0.55 29.5 0 my_ricker
+
+#python:
+for i in range(1,31):
+    print("#rx: 20.450 {} 0".format(i-0.5))
+#end_python:
+
+#src_steps: 0 0 0
+#rx_steps: 0 0.000 0
+
+#box: 0 0 0 21.000 30.000 0.050 granite
+#box: 3.000 5.000 0 8.000 10.000 0.050 krast
+#box: 11.000 19.000 0 16.000 24.000 0.050 krast
+
+cylinder: 15.500 15.000 0 15.500 15.000 2.000 0.500 krast
+
+geometry_view: 0 0 0 21.000 30.000 0.010 0.010 0.010 0.010 krast_carbonatite n
+
+#python:
+for i in range(1, 51):
+    print("#snapshot: 0 0 0 21.000 30.000 0.050 0.050 0.050 0.050 {} snapshot{}".format(i*1e-8, i))
+#end_python:
