@@ -39,6 +39,12 @@
  1、2调节背景介质concrete的透明度以及目标pec的亮度，然后3点击播放即可。最后可以通过4调节播放的速度。
  ![在这里插入图片描述](https://blog-image-beds.oss-cn-beijing.aliyuncs.com/images/20210602141223317.png)
 
+
+
+注意：导入的vti文件和snapshot波场快照文件是对应的，其序号等于AScan个数的序号，即一个random_cylinder_snaps1/文件夹对应一个0_random_cylinder1.vti文件，两个对应的都是序号为1的Ascan扫描点。然后对此Ascan扫描的波形进行模拟仿真。
+
+
+
 # 3、将快照导出为视频或者GIF动画
 
 File ->save Animation 如果想导出视频，可以选择AVI格式导出，如果想制作GIF动画，需要先将快照导出为png图片存在特定文件夹,再通过一段Python代码来生成GIF动画。
